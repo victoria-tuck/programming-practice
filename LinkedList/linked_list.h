@@ -1,31 +1,33 @@
 #ifndef LINKED_LIST_H_
 #define LINKED_LIST_H_
 
+class Node
+{
+    public:
+     int data;
+     Node* next;
+};
+
 class LinkedList
 {
     private:
-     Node* head;
+     Node* _head;
 
     public:
-     LinkedList() {
-        head = nullptr;
-     }
+     LinkedList();
+     LinkedList(Node* head);
 
-     void AddDataToFront(int n);
+     int GetDataAtIndex(uint8_t index);
 
-     void AddDataToEnd(int n);
+    //  void AddDataToFront(int n);
 
-     void AddNodeToFront(Node& node);
+    //  void AddDataToEnd(int n);
 
-     void AddNodeToEnd(Node& node);
+    //  void AddNodeToFront(Node& node);
 
-     void AddNodeAfterNode(int n);
-};
+    //  void AddNodeToEnd(Node& node);
 
-struct Node
-{
-    int data;
-    Node* next;
+    //  void AddNodeAfterNode(int n);
 };
 
 #endif  // LINKED_LIST_H_
